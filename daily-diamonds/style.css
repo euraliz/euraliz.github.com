@@ -91,6 +91,7 @@ cajas
  }
  .cajita2 {
     text-align: right;
+    display: none;
  }
 
 

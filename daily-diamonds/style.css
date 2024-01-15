@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum:opsz,wght@9..40,400&display=swap');
+
+:root {
+    --primary: #CFCDB4;
+    --light: #E1E0D5;
+    --dark: #292626;
+    --dark-transparent: rgba(0, 0, 0, 0.2); 
+    --yellow: #F3D68A;
+    --green: #9FDAA1;
+    --orange: #ED957D; 
+    --blue: #8DB7E8;
+    --pink: #EAACC7;
+    --purple: #CDB5E8;
+    --white: #F5F5F5; 
+    --family: 'DM Sans';
+    --title-family: 'Forum';
+    --radius: 48px;
+    --padding: 22px;
+    --margen-ext: 128px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--family), sans-serif;
+    background-color: var(--light);
+    font-size: 22px;
+    color: var(--dark);
+}
+
+.afternoon {
+    --primary: #AC8D69;
+    --light: #BCA07E;
+    --dark: #292626;
+    --yellow: #D6C27E;
+    --green: #9FAD66;
+    --orange: #C78A67; 
+    --blue: #80AEA2;
+    --pink: #C99093;
+    --purple: #C59191;
+    --white: #DEC5AD; 
+}
+
+.night, .sleeptime {
+    --primary: #1F1A3F;
+    --light: #111023;
+    --dark: #B6BEBB;
+    --dark-transparent: rgba(236, 231, 231, 0.2); 
+    --yellow: #503B29;
+    --green: #273F2E;
+    --orange: #3E1328; 
+    --blue: #192C5C;
+    --pink: #571C3D;
+    --purple: #351A3F;
+    --white: #55405A; 
+}
+
+/**
+* textos 
+**/
+
+.pretitle {
+    margin-top: calc( var(--padding)*2)
+}
+
+.pretitle span {
+    font-family: var(--title-family);
+    font-size: 28px;
+}
+
+.title {
+    font-family: var(--title-family);
+    font-size: clamp(40px,20vh,160px);
+    margin: 20px;
+}
+
+
+/**
+cajas
+**/
+
+.cajita {
+    width: 50%;
+ }
+ .cajita1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+ }
+ .cajita2 {
+    text-align: right;
+ }
+
+
+ .image {
+    aspect-ratio: 1/1;
+    height: 450px;
+    position: relative;
+ }
+
+ .image img {
+    border-radius: var(--radius);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+ }
+
+ .image::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: solid 4px var(--dark);
+    border-radius: var(--radius);
+    mix-blend-mode: overlay;
+    opacity: 0.5;
+ }
+
+ .image.home {
+    position: fixed;
+    right: -30px;
+    top: 80px;
+ }
+
+ .image.home::after {
+    left: 30px;
+    top: -20px;
+ } 
+
+ .image.style::after {
+    left: -50px;
+    top: 20px;
+    z-index: -1;
+ } 
+
+ .image.style {
+    position: fixed;
+    bottom: -30px;
+    right: 80px;
+ }
+
+/**
+elementos
+**/
+
+.top-side {
+    padding-bottom: var(--padding);
+    border-bottom: 2px solid var(--dark);
+}
+
+.button {
+    background-color: transparent;
+    border: solid 2px var(--dark); 
+    border-radius: var(--radius);
+    padding: calc(var(--padding)/2) var(--padding);
+    display: flex;
+    align-items: center;
+    gap: calc(var(--padding)*8);
+    font-size: 20px;
+    font-family: var(--family);
+    color: var(--dark);
+
+}
+.button .icon svg{
+    height: 28px;
+    width: 28px;
+}
+
+.todo-box {
+    background-color: var(--primary);
+    border-radius: var(--radius);
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    padding: calc(var(--padding)/2) var(--padding);
+}
+
+.todo-box .item {
+    list-style-type: none;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"] {
+    background-color: transparent;
+    border: none;
+    font-family: var(--family);
+    font-size: 22px;
+    width: 100%;
+    color: (var(--dark));
+    padding-left: 10px;
+}
+
+::placeholder {
+    color: var(--dark-transparent);
+}
+
+/**
+ * Helpers
+ **/
+
+ .decorator {
+    color: var(--primary);
+    position: absolute;
+    left: var(--padding);
+ }
+ 
+ .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100vw - (var(--margen-ext)*2));
+    margin: 0 auto;
+ }
+
+/**
+custom checkbox yaiiihhh
+**/
+
+.styled-checkbox {
+    --normal-bg: transparent;
+    --hover-bg: var(--light);
+    --active-bg: var(--dark);
+}
+  
+.styled-checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.styled-checkbox label::before {
+    content: "";
+    background-color: var(--normal-bg);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' width='50px' height='50px' fill='currentColor'><path d='M 41.9375 8.625 C 41.273438 8.648438 40.664063 9 40.3125 9.5625 L 21.5 38.34375 L 9.3125 27.8125 C 8.789063 27.269531 8.003906 27.066406 7.28125 27.292969 C 6.5625 27.515625 6.027344 28.125 5.902344 28.867188 C 5.777344 29.613281 6.078125 30.363281 6.6875 30.8125 L 20.625 42.875 C 21.0625 43.246094 21.640625 43.410156 22.207031 43.328125 C 22.777344 43.242188 23.28125 42.917969 23.59375 42.4375 L 43.6875 11.75 C 44.117188 11.121094 44.152344 10.308594 43.78125 9.644531 C 43.410156 8.984375 42.695313 8.589844 41.9375 8.625 Z' /></svg>");
+    background-size: 1000%;
+    background-position: center;
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    transition: 0.2s;
+    border: solid 2px var(--dark);
+}
+  
+.styled-checkbox label:hover::before {
+    background-color: var(--hover-bg);
+}
+
+.styled-checkbox label:active::before {
+    transform: scale(0.9);    
+}
+  
+.styled-checkbox input {
+      display: none;
+}
+
+.styled-checkbox input:checked+label::before {
+    background-color: var(--active-bg);
+    background-size: 90%;
+}

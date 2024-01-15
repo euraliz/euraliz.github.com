@@ -23,9 +23,9 @@ function getTimeOfDay(){
     const now = new Date();
     const hours = now.getHours();
 
-    if(hours >= 6 && hours <= 12 ) hello_text = 'morning'; 
+    if(hours >= 6 && hours <= 12 ) hello_text = 'hey, morning.'; 
     if(hours >= 13 && hours <= 18 ) hello_text = 'afternoon';
-    if(hours >= 19 && hours <= 23 ) hello_text = 'night';
+    if(hours >= 19 && hours <= 23 ) hello_text = 'good night.';
     if(hours >= 1 && hours <= 5 ) hello_text = 'sleeptime';
 
     document.querySelector("html").classList.add(hello_text);

@@ -3,7 +3,7 @@
  */
 
 function getData(){
-    fetch('/data/diamonds.json')
+    fetch('./data/diamonds.json')
         .then( (response) => {
             return response.json();
         })

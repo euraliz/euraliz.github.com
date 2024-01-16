@@ -42,7 +42,7 @@ html, body {
     --white: #DEC5AD; 
 }
 
-.night, .sleeptime {
+.night {
     --primary: #1F1A3F;
     --light: #111023;
     --dark: #B6BEBB;
@@ -55,6 +55,22 @@ html, body {
     --purple: #351A3F;
     --white: #55405A; 
 }
+
+.sleeptime {
+    --primary: #1e1e20;
+    --light: #121214;
+    --dark: #B6BEBB;
+    --dark-transparent: rgba(236, 231, 231, 0.2); 
+    --yellow: #503B29;
+    --green: #273F2E;
+    --orange: #3E1328; 
+    --blue: #192C5C;
+    --pink: #571C3D;
+    --purple: #351A3F;
+    --white: #55405A; 
+}
+
+
 
 /**
 * textos 

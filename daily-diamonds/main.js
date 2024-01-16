@@ -27,12 +27,12 @@ function getTimeOfDay(){
     if(hours >= 6 && hours <= 12 ) hello_text = 'hey, morning.'; 
     if(hours >= 13 && hours <= 18 ) hello_text = 'afternoon.';
     if(hours >= 19 && hours <= 23 ) hello_text = 'good night.';
-    if(hours >= 1 && hours <= 5 ) hello_text = 'sleeptime.';
+    if(hours >= 0 && hours <= 5 ) hello_text = 'sleeptime.';
 
     if(hours >= 6 && hours <= 12 ) bodyclass = 'morning'; 
     if(hours >= 13 && hours <= 18 ) bodyclass = 'afternoon';
     if(hours >= 19 && hours <= 23 ) bodyclass = 'night';
-    if(hours >= 1 && hours <= 5 ) bodyclass = 'sleeptime';
+    if(hours >= 0 && hours <= 5 ) bodyclass = 'sleeptime';
 
 
     document.querySelector("html").classList.add(bodyclass);
